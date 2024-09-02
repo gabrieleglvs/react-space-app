@@ -3,16 +3,21 @@ import EstilosGlobais from "./componentes/EstilosGlobais"
 import Cabecalho from "./componentes/Cabecalho"
 import BarraLateral from "./componentes/BarraLateral"
 import Banner from "./componentes/Banner"
+import bannerImg from "/imagens/banner.png"
 
 const FundoGradiente = styled.div`
   background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
   width: 100%;
   min-height: 100vh;
 `
+const AppContainer = styled.div`
+  width: 1440px;
+  margin: 0 auto;
+  max-width: 100%;
+`
 
-const MainEstilizado = styled.div`
+const MainContainer = styled.main`
   display: flex;
-  justify-content: space-between;
   gap: 20px;
 `
 
@@ -20,11 +25,14 @@ function App() {
   return (
     <FundoGradiente>
       <EstilosGlobais/>
-      <Cabecalho/>
-      <MainEstilizado>
-        <BarraLateral/>
-        <Banner/>
-      </MainEstilizado>
+      <AppContainer>
+        <Cabecalho/>
+        <MainContainer>
+          <BarraLateral/>
+          <Banner texto="A galeria mais completa de fotos do espaço" backgroundImage={bannerImg}
+          />
+        </MainContainer>
+      </AppContainer>
     </FundoGradiente>
   )  
 }

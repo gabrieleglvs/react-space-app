@@ -1,10 +1,6 @@
 import { styled } from "styled-components"
 import ItemNavegacao from "./ItemNavegacao"
 
-const BarraLateralEstilizada = styled.aside`
-    width: 212px;
-`
-
 const ListaEstilizada = styled.ul`
     list-style: none;
     padding: 0;
@@ -14,7 +10,7 @@ const ListaEstilizada = styled.ul`
 
 const BarraLateral = () => {
     return (
-        <BarraLateralEstilizada>
+        <aside>
             <nav>
                 <ListaEstilizada>
                     <ItemNavegacao 
@@ -54,7 +50,7 @@ const BarraLateral = () => {
                     </ItemNavegacao>
                 </ListaEstilizada>
             </nav>
-        </BarraLateralEstilizada>
+        </aside>
     )
 }
 
